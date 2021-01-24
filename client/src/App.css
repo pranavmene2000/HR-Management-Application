@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#demo-simple-select-outlined-sortby-team {
+  min-width: 150px !important;
+}
+
+.react-share__ShareButton {
+  outline: none;
+}
+
+.MuiBox-root{
+  padding: 24px 0 !important;
+}
