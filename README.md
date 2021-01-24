@@ -1,2 +1,2 @@
 # HR-Management-Application
-A
+A Simple HR management App
