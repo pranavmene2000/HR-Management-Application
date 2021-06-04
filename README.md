@@ -12,3 +12,25 @@
 </p>
 
 <img src="https://i.ibb.co/r4qd3gz/Dark-Mode-Demo.jpg" alt="Dark-Mode-Demo" border="0">
+
+## :wrench: How to setup
+
+```bash
+git clone https://github.com/Pranav-mene/HR-Management-Application.git
+cd HR-Management-Application
+npm install && npm start
+cd client && npm install && npm start
+```
+
+## :warning: Requirements
+
+- [npm](https://yarnpkg.com)
+- [node.js](https://zeit.co/download)
+
+## :hamburger: Tech Stack
+
+- Node.js
+- Express.js
+- React.js
+- Redux
+- MongoDB
