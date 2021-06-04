@@ -8,8 +8,13 @@
   <p align="center">
     <br />
     <a href="https://hrmanagementappstackhack.herokuapp.com/" target="_blank" rel="noopener noreferrer">View Demo</a>
+    <br />
   </p>
 </p>
+
+> Human Resource Management System (HRMS) plays core data-management role needed for multiple HR functions such as tracking applications, storing employee data, managing payroll and maintaining regulatory and legal requirements.
+
+<br />
 
 <img src="https://i.ibb.co/r4qd3gz/Dark-Mode-Demo.jpg" alt="Dark-Mode-Demo" border="0">
 
@@ -34,3 +39,9 @@ cd client && npm install && npm start
 - React.js
 - Redux
 - MongoDB
+
+
+
+## :earth_africa: Hosted On
+  
+  ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
