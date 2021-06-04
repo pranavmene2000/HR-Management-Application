@@ -10,3 +10,5 @@
     <a href="https://hrmanagementappstackhack.herokuapp.com/">View Demo</a>
   </p>
 </p>
+
+<img src="https://i.ibb.co/r4qd3gz/Dark-Mode-Demo.jpg" alt="Dark-Mode-Demo" border="0">
