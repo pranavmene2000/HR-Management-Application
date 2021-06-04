@@ -7,7 +7,7 @@
 
   <p align="center">
     <br />
-    <a href="https://hrmanagementappstackhack.herokuapp.com/">View Demo</a>
+    <a href="https://hrmanagementappstackhack.herokuapp.com/" target="_blank" rel="noopener noreferrer">View Demo</a>
   </p>
 </p>
 
