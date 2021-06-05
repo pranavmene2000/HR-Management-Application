@@ -9,6 +9,7 @@ import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
 import PolicyOutlinedIcon from '@material-ui/icons/PolicyOutlined';
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import CreditCardIcon from '@material-ui/icons/CreditCard';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
@@ -21,6 +22,7 @@ import Holidays from './NavbarComponents/Holidays';
 import Policies from './NavbarComponents/Policies';
 import Payroll from './NavbarComponents/Payroll';
 import MySlips from './NavbarComponents/MySlips';
+import Profile from './NavbarComponents/Profile';
 
 export const routesAdmin = [
     {
@@ -61,6 +63,13 @@ export const routesAdmin = [
 ];
 
 export const routesEmp = [
+    {
+        path: "/profile",
+        exact: true,
+        main: () => <Profile />,
+        text: "My Profile",
+        icon: <AccountCircleIcon />
+    },
     {
         path: "/",
         exact: true,

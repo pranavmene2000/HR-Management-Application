@@ -86,9 +86,9 @@ function Appbar({ handleDrawerToggle, logoutUser, ...props }) {
                             >
                                 <MenuIcon color={theme.palette.text.primary} />
                             </IconButton>
-                            <img src={logo} style={{marginRight : '5px'}} width="40px" height="40px" alt=""/>
+                            <img src={logo} style={{ marginRight: '5px' }} width="40px" height="40px" alt="" />
                             <Typography variant="h5" noWrap style={{ color: theme.palette.common.white }}>
-                                HR Management
+                                HRMS
                             </Typography>
                         </Grid>
 
@@ -103,14 +103,14 @@ function Appbar({ handleDrawerToggle, logoutUser, ...props }) {
                                     <Brightness4Icon style={{ fontSize: '27px', color: theme.palette.common.white }} />
                                 </IconButton>
                             ) : (
-                                    <IconButton onClick={() => {
-                                        dispatch({ type: 'CHANGE_THEME', payload: { mode: true } })
-                                        localStorage.setItem("darkState", "dark")
-                                    }
-                                    } aria-label="delete">
-                                        <Brightness4OutlinedIcon style={{ fontSize: '27px', color: theme.palette.common.white }} />
-                                    </IconButton>
-                                )}
+                                <IconButton onClick={() => {
+                                    dispatch({ type: 'CHANGE_THEME', payload: { mode: true } })
+                                    localStorage.setItem("darkState", "dark")
+                                }
+                                } aria-label="delete">
+                                    <Brightness4OutlinedIcon style={{ fontSize: '27px', color: theme.palette.common.white }} />
+                                </IconButton>
+                            )}
                             <Controls.Button
                                 onClick={onLogout}
                                 text="Logout"

@@ -42,14 +42,15 @@ export default function BasicTable({ employee }) {
             empID: employee.empID,
             gender: employee.gender,
         }
-        dispatch({ type: 'LOADING', payload: true })
+        // dispatch({ type: 'LOADING', payload: true })
         axios.post('/create-pdf', data)
             .then(() => axios.get('/fetch-pdf', { responseType: 'blob' }))
             .then((res) => {
                 const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
-                dispatch({ type: 'LOADING', payload: false })
+                // dispatch({ type: 'LOADING', payload: false })
                 saveAs(pdfBlob, 'newPdf.pdf');
             })
+            .catch((err) => console.log('Error during downloading pdf ', err))
     }
     return (
         <>
@@ -67,7 +68,7 @@ export default function BasicTable({ employee }) {
                             </TableHead>
                             <TableBody>
                                 {employee?.payroll?.map((row, index) => (
-                                    <TableRow key={row.index}>
+                                    <TableRow key={index}>
                                         <TableCell style={{ backgroundColor: theme.palette.background.paper }} component="th" scope="row">
                                             {moment(row.from).format('LL')}
                                         </TableCell>

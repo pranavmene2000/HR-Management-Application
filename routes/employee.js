@@ -110,7 +110,7 @@ router.get('/', authenticate, async (req, res, next) => {
     res.status(200).json(Employees);
 })
 
-// @desc    get employee details by id (Admin)
+// @desc    get employee details by id 
 // @route   GET /emp/:id
 // @access  Private
 router.get('/:id', authenticate, async (req, res, next) => {
@@ -122,6 +122,7 @@ router.get('/:id', authenticate, async (req, res, next) => {
         const error = new HttpError('Something went wrong', 500);
         return next(error);
     }
+    console.log(employee_details)
     if (employee_details) {
         res.status(200).json(employee_details);
     } else {
@@ -293,4 +294,4 @@ router.get('/my_slips/:emailId', async (req, res, next) => {
     res.status(200).json({ payroll: get_my_slips.payroll, get_data });
 })
 
-module.exports = router; 
+module.exports = router;

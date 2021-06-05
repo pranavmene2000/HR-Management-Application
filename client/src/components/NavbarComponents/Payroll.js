@@ -8,6 +8,7 @@ import Axios from 'axios'
 import { showSuccessSnackbar } from '../../redux/actions/uiAction'
 import Finance from './Finance';
 import Loading from '../../Loading';
+import moment from 'moment';
 
 const useStyles = makeStyles((theme) => ({
     input: {
@@ -152,7 +153,7 @@ const Payroll = ({ ...props }) => {
                                 className: classes.input
                             }}
                             variant="outlined"
-                            value={values && values.DOB}
+                            value={values.DOB && moment(values.DOB).format("MMM Do YY")}
                             placeholder="DOB"
                             disabled
                         />
@@ -250,7 +251,7 @@ const Payroll = ({ ...props }) => {
                                 className: classes.input
                             }}
                             variant="outlined"
-                            value={values && values.hireDate}
+                            value={values.hireDate && moment(values.hireDate).format("MMM Do YY")}
                             placeholder="Hiring date"
                             disabled
                         />

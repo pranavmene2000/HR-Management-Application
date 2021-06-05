@@ -26,7 +26,7 @@ function EmpDetails({ get_all_employees, Employee, ...props }) {
         get_all_employees()
     }, [get_all_employees])
 
-    if(props.loading){
+    if (props.loading) {
         return (
             <Loading />
         )
@@ -61,7 +61,7 @@ function EmpDetails({ get_all_employees, Employee, ...props }) {
                             </Grid>
                             <Grid item md={4} style={{ flexDirection: 'column', display: "flex" }}>
                                 <span style={{ paddingBottom: '5px' }}>DOB</span>
-                                <TextField disabled value={Employee?.DOB} variant="outlined" />
+                                <TextField disabled value={moment(Employee?.DOB).format("MMM Do YY")} variant="outlined" />
                             </Grid>
                             <Grid item md={4} style={{ flexDirection: 'column', display: "flex" }}>
                                 <span style={{ paddingBottom: '5px' }}> Location</span>
@@ -109,7 +109,7 @@ function EmpDetails({ get_all_employees, Employee, ...props }) {
 
 const mapStateToProps = (state, ownProps) => ({
     Employee: state.emp.employees.find(emp => emp._id === ownProps.match.params.emp_id),
-    loading : state.loading.loading
+    loading: state.loading.loading
 })
 
 export default connect(mapStateToProps, { get_all_employees })(withRouter(EmpDetails))

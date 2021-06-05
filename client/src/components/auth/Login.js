@@ -72,8 +72,8 @@ function Login(props) {
       password : admin1234
 
       Employee credentials : 
-      emailId : employee@gmail.com
-      password : employee1234
+      emailId : noah@gmail.com
+      password : srNZeSpp
     `)
   }, [])
 

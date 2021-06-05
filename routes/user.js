@@ -6,6 +6,7 @@ const { check, validationResult } = require('express-validator');
 const authenticate = require('../middlewares/athenticate');
 const HttpError = require('../http-error');
 const User = require('../models/userSchema');
+const Employee = require('../models/employeeSchema');
 
 const router = express.Router();
 
@@ -151,7 +152,13 @@ router.post('/login', [
 
 ///////////////////////////////////////////////////////
 router.get('/user', authenticate, (req, res) => {
-    res.json(req.user)
+    const { userId, emailId } = req.user;
+
+    Employee.findOne({ emailId })
+        .then((data) => {
+            res.status(200).json(data)
+        })
+        .catch((err) => res.status(400).json({ msg: 'Some error is there......' }))
 });
 
 

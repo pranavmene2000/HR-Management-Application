@@ -116,12 +116,12 @@ function Navbar(props) {
                 <Divider style={{ margin: '15px 0px' }} />
                 <ListItem button onClick={handleClick}>
                     <ListItemIcon>
-                        <AssignmentOutlinedIcon  />
+                        <AssignmentOutlinedIcon />
                     </ListItemIcon>
                     <ListItemText style={{ color: theme.palette.text.primary }} primary="Docs" />
-                    {open ? 
-                    <ExpandLess style={{ color: theme.palette.text.icon }} /> : 
-                    <ExpandMore style={{ color: theme.palette.text.icon }} />}
+                    {open ?
+                        <ExpandLess style={{ color: theme.palette.text.icon }} /> :
+                        <ExpandMore style={{ color: theme.palette.text.icon }} />}
                 </ListItem>
                 <Collapse in={open} timeout="auto" unmountOnExit>
                     <List>
@@ -200,15 +200,15 @@ function Navbar(props) {
                             />
                         ))
                     ) : (
-                            [...routesEmp, ...Docs].map((route, index) => (
-                                <Route
-                                    key={index}
-                                    path={route.path}
-                                    exact={route.exact}
-                                    children={<route.main />}
-                                />
-                            ))
-                        )}
+                        [...routesEmp, ...Docs].map((route, index) => (
+                            <Route
+                                key={index}
+                                path={route.path}
+                                exact={route.exact}
+                                children={<route.main />}
+                            />
+                        ))
+                    )}
                 </Switch>
             </div>
         </div>

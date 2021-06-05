@@ -69,7 +69,7 @@ function MySlips({ ...props }) {
             .catch(error => {
                 console.log(error)
             })
-    }, [dispatch,props.auth.user.emailId])
+    }, [dispatch, props.auth.user.emailId])
 
     if (props.loading) {
         return (
